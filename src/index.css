@@ -135,3 +135,9 @@ body {
     font-size: 40px;
   }
 }
+
+/* Ensure proper stacking without breaking Loading screen */
+.container-main {
+  position: relative;
+  z-index: 10;
+}

@@ -146,6 +146,55 @@ const WhatIDo = () => {
               <div className="what-arrow"></div>
             </div>
           </div>
+
+          <div
+            className="what-content what-noTouch"
+            ref={(el) => setRef(el, 2)}
+          >
+            <div className="what-border1">
+              <svg height="100%">
+                <line
+                  x1="0"
+                  y1="0"
+                  x2="100%"
+                  y2="0"
+                  stroke="white"
+                  strokeWidth="2"
+                  strokeDasharray="6,6"
+                />
+                <line
+                  x1="0"
+                  y1="100%"
+                  x2="100%"
+                  y2="100%"
+                  stroke="white"
+                  strokeWidth="2"
+                  strokeDasharray="6,6"
+                />
+              </svg>
+            </div>
+            <div className="what-corner"></div>
+            <div className="what-content-in">
+              <h3>UI/UX</h3>
+              <h4>Designing Seamless Experiences</h4>
+              <p>
+                From wireframes to high-fidelity prototypes, crafting intuitive - user centric
+                designs that blend aesthetics with functionality.
+              </p>
+              <h5>Skillset & tools</h5>
+              <div className="what-content-flex">
+                <div className="what-tags">Figma</div>
+                <div className="what-tags">Spline 3D</div>
+                <div className="what-tags">Wireframing</div>
+                <div className="what-tags">Prototyping</div>
+                <div className="what-tags">User Research</div>
+                <div className="what-tags">Design Systems</div>
+                <div className="what-tags">Motion Design</div>
+                <div className="what-tags">Responsive Design</div>
+              </div>
+              <div className="what-arrow"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

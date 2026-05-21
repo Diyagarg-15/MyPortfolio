@@ -34,42 +34,42 @@
 }
 .what-box-in {
   flex-direction: column;
-  height: 500px;
+  height: 700px; 
   margin-left: 200px;
+  margin-top: 30px; 
   position: relative;
   display: none;
 }
 .what-content {
   width: 450px;
   height: 33%;
-  min-height: 50%;
+  min-height: 33%; 
   transition: 0.5s;
-  /* border: 0.5px dashed rgba(255, 255, 255, 0.3); */
   position: relative;
-  padding: 50px;
+  padding: 40px 50px; 
   box-sizing: border-box;
 }
 
 .what-noTouch:hover,
 .what-content-active {
-  min-height: 67%;
-  padding: 40px 50px;
+  min-height: 50%; 
+  padding: 35px 50px;
 }
 
 .what-noTouch:hover ~ .what-content,
 .what-box-in:hover .what-noTouch:not(:hover),
 .what-content.what-sibling {
-  min-height: 33%;
-  padding: 10px 50px;
+  min-height: 20%; 
+  padding: 8px 50px;
 }
 .what-content h3 {
-  font-size: 35px;
+  font-size: 33px; 
   letter-spacing: 1px;
   margin: 0;
 }
 .what-content p {
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 12px; 
+  line-height: 17px;
   font-weight: 200;
   letter-spacing: 0.7px;
 }
@@ -77,7 +77,7 @@
   font-weight: 300;
   letter-spacing: 1px;
   margin: 0px;
-  font-size: 14px;
+  font-size: 12px; 
   opacity: 0.3;
 }
 .what-content-in {
@@ -184,6 +184,7 @@
   left: 50%;
   transform: translateX(-50%);
   width: 450px;
+  height: 100%;
 }
 .what-border2 {
   position: absolute;
@@ -199,7 +200,7 @@
   animation: whatBorders 1.2s 1 forwards;
 }
 .what-border2 svg {
-  height: 500px;
+  height: 700px; /* updated to match new box height */
   top: 50%;
   transform: translateY(-50%);
   position: absolute;
@@ -211,7 +212,7 @@
 .what-content-in h5 {
   font-weight: 300;
   opacity: 0.5;
-  font-size: 12px;
+  font-size: 11px; /* reduced from 12px */
   letter-spacing: 1px;
   font-family: "Geist", sans-serif;
   margin-bottom: 5px;
@@ -232,7 +233,7 @@
   flex-wrap: wrap;
 }
 .what-tags {
-  font-size: 13px;
+  font-size: 11px; /* reduced from 13px */
   font-weight: 400;
   padding: 2px 7px;
   background-color: rgba(255, 255, 255, 0.15);
@@ -249,30 +250,31 @@
     margin-right: 20%;
   }
   .what-box-in {
-    height: 400px;
+    height: 600px;
+    margin-top: -40px;
   }
   .what-content h3 {
-    font-size: 28px;
+    font-size: 26px; /* reduced from 28px */
   }
   .what-content {
-    padding: 30px;
+    padding: 25px 30px;
     width: 400px;
   }
   .what-content p {
-    font-size: 13px;
+    font-size: 11px; /* reduced from 13px */
   }
   .what-noTouch:hover,
   .what-content-active {
-    padding: 20px 30px;
+    padding: 18px 30px;
   }
 
   .what-noTouch:hover ~ .what-content,
   .what-box-in:hover .what-noTouch:not(:hover),
   .what-content.what-sibling {
-    padding: 10px 30px;
+    padding: 8px 30px;
   }
   .what-tags {
-    font-size: 12px;
+    font-size: 10px; /* reduced from 12px */
   }
 }
 @media only screen and (max-width: 1400px) {
@@ -290,27 +292,28 @@
     padding-bottom: 50px;
   }
   .what-box-in {
-    height: 500px;
+    height: 600px;
     margin-left: -50px;
+    margin-top: -30px;
   }
   .what-content {
-    padding: 50px;
+    padding: 40px 50px;
     width: 500px;
   }
   .what-content p {
-    font-size: 14px;
+    font-size: 12px; /* reduced from 14px */
   }
   .what-noTouch:hover,
   .what-content-active {
-    min-height: 67%;
-    padding: 50px;
+    min-height: 60%;
+    padding: 40px 50px;
   }
 
   .what-noTouch:hover ~ .what-content,
   .what-box-in:hover .what-noTouch:not(:hover),
   .what-content.what-sibling {
-    min-height: 33%;
-    padding: 10px 50px;
+    min-height: 20%;
+    padding: 8px 50px;
   }
 }
 @media only screen and (max-width: 900px) {
@@ -326,7 +329,7 @@
     justify-content: left;
   }
   .what-box:last-child {
-    height: 500px;
+    height: 600px; /* updated from 500px */
   }
   .what-box {
     width: 500px;
@@ -338,7 +341,8 @@
   }
   .what-box-in {
     margin-left: 0px;
-    height: 450px;
+    margin-top: 0px;
+    height: 550px; /* updated from 450px */
   }
   .what-content h5,
   .what-content-flex {
@@ -352,17 +356,17 @@
     opacity: 1;
   }
   .what-content {
-    padding: 30px;
+    padding: 25px 30px;
   }
   .what-content p {
-    font-size: 11px;
+    font-size: 10px; /* reduced from 11px */
   }
   .what-noTouch:hover,
   .what-content-active {
     padding: 10px 30px;
   }
   .what-tags {
-    font-size: 11px;
+    font-size: 10px; /* reduced from 11px */
   }
 
   .what-noTouch:hover ~ .what-content,
@@ -371,7 +375,7 @@
     padding: 5px 30px;
   }
   .what-content h3 {
-    font-size: 25px;
+    font-size: 23px; /* reduced from 25px */
   }
 }
 @media only screen and (max-width: 550px) {

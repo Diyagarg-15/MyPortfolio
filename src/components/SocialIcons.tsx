@@ -60,7 +60,7 @@ const SocialIcons = () => {
     <div className="icons-section">
       <div className="social-icons" data-cursor="icons" id="social">
         <span>
-          <a href="https://github.com/rajeshchityal" target="_blank">
+          <a href="https://github.com/Diyagarg-15" target="_blank">
             <FaGithub />
           </a>
         </span>
@@ -72,11 +72,6 @@ const SocialIcons = () => {
         <span>
           <a href="https://x.com/rajeshchityal" target="_blank">
             <FaXTwitter />
-          </a>
-        </span>
-        <span>
-          <a href="https://www.instagram.com/rajeshchityal" target="_blank">
-            <FaInstagram />
           </a>
         </span>
       </div>

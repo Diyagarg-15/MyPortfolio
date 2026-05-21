@@ -205,12 +205,24 @@
   z-index: 9;
 }
 
+.landing-h3-swap {
+  position: relative;
+  overflow: hidden;
+  height: 30px;
+}
+
 .landing-info h3 {
   font-size: 22px;
   letter-spacing: 2px;
   font-weight: 300;
   color: var(--accentColor);
   margin: 0;
+}
+
+.landing-h3-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .landing-info h2 {
@@ -275,6 +287,10 @@ h2.landing-info-h2 {
     font-size: 18px;
   }
 
+  .landing-h3-swap {
+    height: 24px;
+  }
+
   .landing-intro h2 {
     font-size: 18px;
   }
@@ -310,6 +326,10 @@ h2.landing-info-h2 {
 
   .landing-info h3 {
     font-size: 25px;
+  }
+
+  .landing-h3-swap {
+    height: 32px;
   }
 
   .landing-info h2 {
@@ -384,6 +404,10 @@ h2.landing-info-h2 {
 
   .landing-info h3 {
     font-size: 35px;
+  }
+
+  .landing-h3-swap {
+    height: 44px;
   }
 
   .landing-info h2 {

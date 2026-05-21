@@ -133,6 +133,15 @@ export function setCharTimeline(
 }
 
 export function setAllTimeline() {
+  const tM2 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".what-box-in",
+      start: "top 70%",
+      end: "bottom top",
+    },
+  });
+  tM2.to(".what-box-in", { display: "flex", duration: 0.1, delay: 0 }, 0);
+
   const careerTimeline = gsap.timeline({
     scrollTrigger: {
       trigger: ".career-section",

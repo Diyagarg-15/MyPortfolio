@@ -13,7 +13,7 @@ export function initialFX() {
   });
 
   var landingText = new SplitText(
-    [".landing-info h3", ".landing-intro h2", ".landing-intro h1"],
+    [".landing-h3-1", ".landing-intro h2", ".landing-intro h1"],
     {
       type: "chars,lines",
       linesClass: "split-line",
@@ -76,8 +76,12 @@ export function initialFX() {
   var landingText4 = new SplitText(".landing-h2-1", TextProps);
   var landingText5 = new SplitText(".landing-h2-2", TextProps);
 
+  var landingH3_1 = new SplitText(".landing-h3-1", TextProps);
+  var landingH3_2 = new SplitText(".landing-h3-2", TextProps);
+
   LoopText(landingText2, landingText3);
   LoopText(landingText4, landingText5);
+  LoopText(landingH3_1, landingH3_2);
 }
 
 function LoopText(Text1: SplitText, Text2: SplitText) {
