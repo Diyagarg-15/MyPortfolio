@@ -3,63 +3,67 @@ import "./styles/Work.css";
 
 const projects = [
   {
-    title: "E-Commerce Dashboard",
-    desc: "A full-featured admin panel with real-time analytics, order tracking, and inventory management.",
-    stack: [
-      { name: "React", hl: true },
-      { name: "TypeScript", hl: true },
-      { name: "Tailwind", hl: false },
-      { name: "Recharts", hl: false },
-    ],
-    url: "yourproject.com",
-    img: "https://picsum.photos/seed/proj1/700/1400",
-  },
-  {
-    title: "Design System UI Kit",
-    desc: "A component library with 60+ elements, dark/light mode, and a live Storybook playground.",
-    stack: [
-      { name: "React", hl: true },
-      { name: "Storybook", hl: false },
-      { name: "CSS Modules", hl: false },
-      { name: "Figma", hl: false },
-    ],
-    url: "designsystem.dev",
-    img: "https://picsum.photos/seed/proj2/700/1400",
-  },
-  {
-    title: "SaaS Landing Page",
-    desc: "High-conversion landing page with animated sections, pricing table, and waitlist form.",
+    title: "Travel booking & exploration platform",
+    desc: "A full-featured travel website  where planing, exploring , and booking your next destination is easy — all in one place.",
     stack: [
       { name: "Next.js", hl: true },
-      { name: "Framer Motion", hl: true },
-      { name: "Tailwind", hl: false },
+      { name: "TypeScript", hl: true },
+      { name: "Tailwind", hl: true },
+      { name: ".Net", hl: true },
     ],
-    url: "saasapp.io",
-    img: "https://picsum.photos/seed/proj3/700/1400",
+    url: "https://github.com/Diyagarg-15/tafriTravels",
+    img: "https://picsum.photos/seed/proj1/700/1400",
+    video: "images/travel.mp4",
   },
   {
-    title: "Creative Portfolio",
-    desc: "Scroll-driven animations, project case studies, and custom cursor interactions.",
+    title: "UI/UX showcase",
+    desc: "creative personal product showcase with immersive storytelling UI.",
     stack: [
-      { name: "React", hl: true },
-      { name: "GSAP", hl: false },
-      { name: "Three.js", hl: false },
-      { name: "Sass", hl: false },
+      { name: "Javascript", hl: true },
+      { name: "Framer", hl: true },
+      { name: "Scroll animations", hl: true },
+      { name: "Figma", hl: true },
     ],
-    url: "portfolio.design",
-    img: "https://picsum.photos/seed/proj4/700/1400",
+    url: "https://67booze.framer.website/",
+    img: "https://picsum.photos/seed/proj2/700/1400",
+    video: "images/67.mp4",
   },
   {
-    title: "Task Management App",
-    desc: "Drag-and-drop kanban board with real-time sync, workspace sharing, and AI task suggestions.",
+    title: "E-commerce retail website",
+    desc: "A full-featured admin panel with real-time analytics, order tracking, and inventory management.",
+    stack: [
+      { name: "Next.js", hl: true },
+      { name: "React", hl: true },
+      { name: "Tailwind", hl: true },
+      { name: "Wordpress", hl: true },
+    ],
+    url: "https://pringo.in/",
+    img: "images/pringo.png",
+  },
+  {
+    title: "Movie Booking real-time website",
+    desc: "Real-time movie discovery, seat booking, and cinema selection — all by your location with Admin Dashboard to manage data",
     stack: [
       { name: "React", hl: true },
-      { name: "Zustand", hl: false },
-      { name: "Supabase", hl: false },
-      { name: "dnd-kit", hl: false },
+      { name: "Springboot", hl: false },
+      { name: "SQL", hl: true },
+      { name: "Tailwind", hl: true },
     ],
-    url: "taskflow.app",
+    url: "https://github.com/Diyagarg-15/multiplex-website-main",
+    img: "images/Movie.png",
+  },
+  {
+    title: "TCSS Mechanics — Animation Showcase",
+    desc: "A deep dive into what pure CSS can do — complex animations, precision timing, and motion built entirely without libraries.",
+    stack: [
+      { name: "CSS", hl: true },
+      { name: "GSAP", hl: true },
+      { name: "SCSS", hl: true },
+      { name: "HTML", hl: true },
+    ],
+    url: "https://github.com/Diyagarg-15/moonlight",
     img: "https://picsum.photos/seed/proj5/700/1400",
+    video: "images/sun.mp4"
   }
 ];
 
@@ -96,7 +100,7 @@ const Work = () => {
     if (!trackRef.current) return 'translateX(0px)';
     const firstCard = trackRef.current.children[0] as HTMLElement;
     if (!firstCard) return 'translateX(0px)';
-    
+
     const cardWidth = firstCard.getBoundingClientRect().width;
     const gap = 24;
     return `translateX(-${current * (cardWidth + gap)}px)`;
@@ -130,8 +134,8 @@ const Work = () => {
   const handleMouseLeave = (e: React.MouseEvent<HTMLDivElement>) => {
     const video = e.currentTarget.querySelector('.screen-video') as HTMLVideoElement;
     if (video) {
-        video.pause();
-        video.currentTime = 0;
+      video.pause();
+      video.currentTime = 0;
     }
   };
 
@@ -147,17 +151,17 @@ const Work = () => {
 
       <div className="carousel-outer">
         <div className="carousel-track-wrap">
-          <div 
-            className="carousel-track" 
-            id="track" 
+          <div
+            className="carousel-track"
+            id="track"
             ref={trackRef}
             style={trackStyle}
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
           >
             {projects.map((proj, idx) => (
-              <div 
-                className="project-card" 
+              <div
+                className="project-card"
                 key={idx}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
@@ -173,7 +177,18 @@ const Work = () => {
                   </div>
                 </div>
                 <div className="screen-wrap">
-                  <img className="screen-img" src={proj.img} alt={`${proj.title} preview`} />
+                  {proj.video ? (
+                    <video
+                      className="screen-video"
+                      src={proj.video}
+                      preload="auto"
+                      muted
+                      loop
+                      playsInline
+                    />
+                  ) : (
+                    <img className="screen-img" src={proj.img} alt={`${proj.title} preview`} />
+                  )}
                   <div className="hover-reveal">
                     <span className="hover-hint">Scrolling through</span>
                   </div>
@@ -184,7 +199,7 @@ const Work = () => {
                   <p className="card-desc">{proj.desc}</p>
                   <div className="stack-row">
                     {proj.stack.map((s, sIdx) => (
-                        <span key={sIdx} className={`stack-pill ${s.hl ? 'highlight' : ''}`}>{s.name}</span>
+                      <span key={sIdx} className={`stack-pill ${s.hl ? 'highlight' : ''}`}>{s.name}</span>
                     ))}
                   </div>
                   <div className="card-actions">
@@ -198,9 +213,9 @@ const Work = () => {
         </div>
 
         <div className="carousel-controls">
-          <button 
-            className="ctrl-btn" 
-            id="prev-btn" 
+          <button
+            className="ctrl-btn"
+            id="prev-btn"
             aria-label="Previous"
             onClick={handlePrev}
             disabled={current === 0}
@@ -209,17 +224,17 @@ const Work = () => {
           </button>
           <div className="ctrl-dots" id="ctrl-dots">
             {Array.from({ length: total }).map((_, i) => (
-                <button 
-                    key={i}
-                    className={`ctrl-dot ${i === current ? 'active' : ''}`}
-                    aria-label={`Go to project ${i + 1}`}
-                    onClick={() => goTo(i)}
-                />
+              <button
+                key={i}
+                className={`ctrl-dot ${i === current ? 'active' : ''}`}
+                aria-label={`Go to project ${i + 1}`}
+                onClick={() => goTo(i)}
+              />
             ))}
           </div>
-          <button 
-            className="ctrl-btn" 
-            id="next-btn" 
+          <button
+            className="ctrl-btn"
+            id="next-btn"
             aria-label="Next"
             onClick={handleNext}
             disabled={current >= total - visible}
