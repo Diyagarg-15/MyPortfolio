@@ -1,6 +1,5 @@
 import {
   FaGithub,
-  FaInstagram,
   FaLinkedinIn,
   FaXTwitter,
 } from "react-icons/fa6";
@@ -65,12 +64,12 @@ const SocialIcons = () => {
           </a>
         </span>
         <span>
-          <a href="https://www.linkedin.com/in/rajeshchityal" target="_blank">
+          <a href="https://www.linkedin.com/in/diyagarg1511/" target="_blank">
             <FaLinkedinIn />
           </a>
         </span>
         <span>
-          <a href="https://x.com/rajeshchityal" target="_blank">
+          <a href="https://x.com/diya" target="_blank">
             <FaXTwitter />
           </a>
         </span>

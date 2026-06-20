@@ -28,29 +28,12 @@ const Contact = () => {
               Github <MdArrowOutward />
             </a>
             <a
-              href="https://www.linkedin.com/in/rajesh-chityal-2a70141b3"
+              href="https://www.linkedin.com/in/diyagarg1511/"
               target="_blank"
               data-cursor="disable"
               className="contact-social"
             >
               Linkedin <MdArrowOutward />
-            </a>
-            //behance add krna hai ---
-            <a
-              href="https://x.com/raxx21_official"
-              target="_blank"
-              data-cursor="disable"
-              className="contact-social"
-            >
-              Twitter <MdArrowOutward />
-            </a>
-            <a
-              href="https://www.instagram.com/therajeshchityal"
-              target="_blank"
-              data-cursor="disable"
-              className="contact-social"
-            >
-              Instagram <MdArrowOutward />
             </a>
           </div>
           <div className="contact-box">
