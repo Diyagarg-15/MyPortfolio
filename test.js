@@ -1,3 +1,4 @@
+/*
 let endListener = false;
 
 clickElement.addEventListener("click", () => {
@@ -15,3 +16,5 @@ video.addEventListener("ended", () => {
 
   console.log("Video has ended");
 });
+*/
+

@@ -1,3 +1,4 @@
+/*
 import Scene from "./Scene";
 
 const CharacterModel = () => {
@@ -5,3 +6,6 @@ const CharacterModel = () => {
 };
 
 export default CharacterModel;
+*/
+export {};
+
