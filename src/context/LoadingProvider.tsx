@@ -2,6 +2,7 @@ import {
   createContext,
   PropsWithChildren,
   useContext,
+  useEffect,
   useState,
 } from "react";
 import Loading from "../components/Loading";
@@ -23,7 +24,7 @@ export const LoadingProvider = ({ children }: PropsWithChildren) => {
     setIsLoading,
     setLoading,
   };
-  // useEffect(() => {}, [loading]);
+  useEffect(() => { }, [loading]);
 
   return (
     <LoadingContext.Provider value={value as LoadingType}>
