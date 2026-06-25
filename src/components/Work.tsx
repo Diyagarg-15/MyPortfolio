@@ -203,7 +203,7 @@ const Work = () => {
                     ))}
                   </div>
                   <div className="card-actions">
-                    <a href="#" className="btn-live">↗ View live</a>
+                    <a href={proj.url} className="btn-live">↗ View live</a>
                     <a href="#" className="btn-gh">GitHub</a>
                   </div>
                 </div>
