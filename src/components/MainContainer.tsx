@@ -9,6 +9,8 @@ import SocialIcons from "./SocialIcons";
 import WhatIDo from "./WhatIDo";
 import Work from "./Work";
 import setSplitText from "./utils/splitText";
+import { setAllTimeline } from "./utils/GsapScroll";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const TechStack = lazy(() => import("./TechStack"));
 
@@ -28,6 +30,20 @@ const MainContainer = ({ children }: PropsWithChildren) => {
       window.removeEventListener("resize", resizeHandler);
     };
   }, [isDesktopView]);
+
+  // Register GSAP ScrollTrigger timelines AFTER the DOM is fully painted.
+  // A two-tick delay (double rAF) ensures all section heights are measured
+  // correctly before ScrollTrigger calculates its start/end positions.
+  useEffect(() => {
+    let rafId: number;
+    rafId = requestAnimationFrame(() => {
+      rafId = requestAnimationFrame(() => {
+        setAllTimeline();
+        ScrollTrigger.refresh();
+      });
+    });
+    return () => cancelAnimationFrame(rafId);
+  }, []);
 
   return (
     <div className="container-main">
